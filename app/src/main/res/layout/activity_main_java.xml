@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText para ingresar texto -->
+    <EditText
+        android:id="@+id/etTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce un texto"
+        android:layout_marginTop="32dp" />
+
+    <!-- Espacio entre el EditText y el tamaño -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <!-- Texto que muestra el tamaño actual -->
+    <TextView
+        android:id="@+id/tvTamanioActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Tamaño: (1/50)" />
+
+    <!-- Espacio entre el tamaño y la SeekBar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- SeekBar para el tamaño de texto -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="49"
+        android:progress="0" />
+
+    <!-- Espacio entre la SeekBar y el botón -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Botón Aplicar Cambios, centrado -->
+    <Button
+        android:id="@+id/btnAplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="APLICAR Y VISUALIZAR"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/button_background"
+        android:padding="10dp" />
+
+    <!-- Valores actuales -->
+    <TextView
+        android:id="@+id/tvValoresActuales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Valores actuales de la aplicación:\nTexto: texto por defecto\nTamaño: 32"
+        android:lineSpacingExtra="2dp" />
+
+    <!-- Espacio -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Contenedor para botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <!-- Botón Cerrar -->
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CERRAR"
+            android:background="@drawable/button_background"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Botón logo de Kotlin -->
+        <ImageButton
+            android:id="@+id/btnkotlin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kotlin_logo"
+            android:contentDescription="Botón para ir a Kotlin" />
+    </LinearLayout>
+</LinearLayout>
